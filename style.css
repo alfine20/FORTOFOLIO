@@ -568,7 +568,7 @@ ul {
 
 .timeline-item {
     position: relative;
-    padding: 2rem 0;
+    padding: 3rem 0;
     width: 50%;
 }
 
@@ -776,48 +776,45 @@ ul {
     height: 28px;
 }
 
-.skill-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+.skill-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
 }
 
-.skill-bar {
+.skill-icon-item {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: all var(--transition);
 }
 
-.skill-info span:first-child {
-    font-size: 0.9375rem;
-    font-weight: 500;
+.skill-icon-item:hover {
+    border-color: var(--accent);
+    background: var(--accent-glow);
+    transform: translateY(-4px);
 }
 
-.skill-percent {
-    font-family: var(--font-mono);
-    color: var(--accent);
+.skill-icon-item img {
+    width: 40px;
+    height: 40px;
+    transition: transform var(--transition);
+}
+
+.skill-icon-item:hover img {
+    transform: scale(1.15);
+}
+
+.skill-icon-item span {
+    font-size: 0.75rem;
     font-weight: 600;
-}
-
-.bar {
-    height: 8px;
-    background: var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, var(--accent), var(--accent-light));
-    border-radius: 4px;
-    transition: width 1.2s ease-out;
+    color: var(--text-secondary);
+    text-align: center;
 }
 
 /* Projects */

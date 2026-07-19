@@ -87,25 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function initSkillBars() {
-        const skillBars = document.querySelectorAll('.progress');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = '0';
-                    requestAnimationFrame(() => {
-                        entry.target.style.transition = 'width 1.2s ease-out';
-                        entry.target.style.width = width;
-                    });
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        skillBars.forEach(bar => observer.observe(bar));
-    }
-
     function initContactForm() {
         if (!contactForm) return;
 
@@ -214,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollSpy();
     initNavbarScroll();
     initHeroAnimation();
-    initSkillBars();
     initContactForm();
     initParallax();
     initProjectCards();
