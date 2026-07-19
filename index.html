@@ -1,133 +1,392 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
-    <title>My Portofolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfin Alifurrohman | Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
 
 <body>
-
-    <nav>
-        <header class="navbar">
-            <div class="logo">
-                    <h1>Alfin</h1>
-            </div>
-            <div class="tengah">
-                <a href="Home">home</a>
-                <a href="Home">Pengalaman</a>
-                <a href="Home">Pendidikan</a>
-                <a href="Home">Skilss</a>
-                <a href="Home">COntact</a>
-            </div>
-            <div class="gatau">
-                <h1 style="color:transparent">a</h1>
-            </div>
-        </header>
-
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Alfin logo">
+            <h1>Alfin</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#pengalaman">Pengalaman</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Project</a>
+            <a href="#kontak">Kontak</a>
+        </div>
     </nav>
 
-    <main class="container">
-        <div class="hero">
-
-            <h1>
-                Hi, I'm <span class="nama">Alfin'e</span>
-                <br>
-                Frontend Developer<span class="blink"><b> <img width="50" height="45"
-                            src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-monkey-animal-faces-icongeek26-linear-colour-icongeek26.png"
-                            alt="external-monkey-animal-faces-icongeek26-linear-colour-icongeek26" /></b></span>
-            </h1>
-            <div class="king">
-                <img class="profile" src="profile.png">
-            </div>
-
-            <h2>Alfin Alifurrohman</h2>
-            <br>
-            <p>
-                I build modern,reponsive,and user-friendly web experiences
-            </p>
-            <br>
-            <div class="skills">
-                <h3>Skills</h3>
-                <br>
-                <div class="pembungkus-skills">
-                    <div class="img-skil">
-
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png"
-                            alt="html-5--v1" />
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3" />
-                        <img width="48" height="48" src="https://img.icons8.com/3d-fluency/94/github-logo.png"
-                            alt="github-logo" />
-                        <img width="48" height="48" src="https://img.icons8.com/cute-clipart/64/free-fire.png"
-                            alt="free-fire" />
-                        <img width="48" height="48" src="https://img.icons8.com/plasticine/100/mobile-legends.png"
-                            alt="mobile-legends" />
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="greeting">Halo, saya <span class="nama">Alfin Alifurrohman</span> <span class="wave">👋</span></p>
+                <h1>Frontend Developer</h1>
+                <p class="tagline">Membangun antarmuka web yang modern, responsif, dan user-friendly dengan <span class="highlight">React</span>, <span class="highlight">Vue</span>, & <span class="highlight">TypeScript</span></p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Project</a>
+                    <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Tahun Belajar</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Project Dibangun</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Teknologi Dikuasai</span>
                     </div>
                 </div>
             </div>
-        </div>
-        <section class="right">
-            <h2>Featured Project</h2>
-            <div class="project-container">
-                <div class="card">
-                    <img class="box" src="p1.png" alt="">
-                    <h3>Bokurce Library</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt atque quo nam est vero harum!</p>
-
-                    <div class="tech">
-                        <div class="html">
-                            <h4>HTML</h4>
+            <div class="hero-image">
+                <div class="profile-wrapper">
+                    <img class="profile" src="profile.png" alt="Alfin Alifurrohman">
+                    <div class="profile-ring"></div>
+                    <div class="floating-cards">
+                        <div class="float-card card-1">
+                            <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML">
+                            <span>HTML5</span>
                         </div>
-                        <div class="css">
-                            <h4>CSS</h4>
+                        <div class="float-card card-2">
+                            <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
+                            <span>CSS3</span>
                         </div>
-                        <div class="js">
-                            <h4>JavaScript</h4>
+                        <div class="float-card card-3">
+                            <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JS">
+                            <span>JavaScript</span>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="box" src="p1.png" alt="">
-                    <h3>Bokurce Library</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt atque quo nam est vero harum!</p>
-
-                    <div class="tech">
-                        <div class="html">
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="css">
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="js">
-                            <h4>JavaScript</h4>
+                        <div class="float-card card-4">
+                            <img src="https://img.icons8.com/color/48/react-native.png" alt="React">
+                            <span>React</span>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="box" src="p1.png" alt="">
-                    <h3>Bokurce Library</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt atque quo nam est vero harum!</p>
+            </div>
+        </section>
 
-                    <div class="tech">
-                        <div class="html">
-                            <h4>HTML</h4>
+        <section id="pengalaman" class="section">
+            <div class="section-header">
+                <span class="section-tag">Pengalaman</span>
+                <h2>Perjalanan <span class="highlight">Karir</span> Saya</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Sekarang</div>
+                        <h3>Frontend Developer (Freelance)</h3>
+                        <p class="company">Project Pribadi & Freelance</p>
+                        <ul class="achievements">
+                            <li>Membangun landing page & dashboard admin untuk UMKM lokal</li>
+                            <li>Mengimplementasikan responsive design dengan Tailwind CSS</li>
+                            <li>Integrasi API RESTful & state management dengan React Query</li>
+                            <li>Optimasi performa web (Lighthouse score 90+)</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>React</span><span>TypeScript</span><span>Tailwind</span><span>Vite</span>
                         </div>
-                        <div class="css">
-                            <h4>CSS</h4>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3>Mahasiswa Magang / Internship</h3>
+                        <p class="company">PT. Digital Solutions Indonesia</p>
+                        <ul class="achievements">
+                            <li>Membantu pengembangan fitur frontend aplikasi internal</li>
+                            <li>Belajar best practices code review & Git workflow</li>
+                            <li>Membuat komponen UI reusable dengan Storybook</li>
+                            <li>Kolaborasi tim dengan Jira & Agile methodology</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Vue.js</span><span>Nuxt</span><span>Pinia</span><span>Git</span>
                         </div>
-                        <div class="js">
-                            <h4>JavaScript</h4>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3>Self-taught Frontend Development</h3>
+                        <p class="company">Belajar Mandiri & Bootcamp Online</p>
+                        <ul class="achievements">
+                            <li>Menguasai fundamental: HTML, CSS, JavaScript (ES6+)</li>
+                            <li>Mempelajari React.js, Next.js, dan ekosistem modern</li>
+                            <li>Membangun 10+ project latihan (clone, CRUD, dashboard)</li>
+                            <li>Aktif di komunitas developer & open source</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>HTML/CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan" class="section">
+            <div class="section-header">
+                <span class="section-tag">Pendidikan</span>
+                <h2>Latar Belakang <span class="highlight">Pendidikan</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <img src="https://img.icons8.com/fluency/48/graduation-cap.png" alt="S1">
+                    </div>
+                    <h3>S1 Teknik Informatika</h3>
+                    <p class="school">Universitas Teknologi Indonesia</p>
+                    <p class="period">2020 - 2024</p>
+                    <div class="edu-details">
+                        <p><strong>Fokus:</strong> Software Engineering, Web Development, Database</p>
+                        <p><strong>Capstone Project:</strong> "E-Learning Platform" - Fullstack dengan Next.js & PostgreSQL</p>
+                        <p><strong>IPK:</strong> 3.75/4.00</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span>Algorithm</span><span>Database</span><span>OOP</span><span>Web Dev</span>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <img src="https://img.icons8.com/fluency/48/certificate.png" alt="Cert">
+                    </div>
+                    <h3>Sertifikasi & Kursus</h3>
+                    <p class="school">Berbagai Platform Online</p>
+                    <p class="period">2022 - Sekarang</p>
+                    <div class="edu-details">
+                        <p>• Meta Front-End Developer Certificate (Coursera)</p>
+                        <p>• React - The Complete Guide (Udemy - Maximilian Schwarzmüller)</p>
+                        <p>• TypeScript for Professionals (Dicoding)</p>
+                        <p>• AWS Cloud Practitioner Essentials</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span>React</span><span>TypeScript</span><span>Testing</span><span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-header">
+                <span class="section-tag">Keahlian</span>
+                <h2>Teknologi & <span class="highlight">Tools</span> yang Dikuasai</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><img src="https://img.icons8.com/color/32/html-5--v1.png" alt="Frontend"> Frontend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>HTML5 / CSS3</span><span class="skill-percent">95%</span></div>
+                            <div class="bar"><div class="progress" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>JavaScript (ES6+)</span><span class="skill-percent">90%</span></div>
+                            <div class="bar"><div class="progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>TypeScript</span><span class="skill-percent">85%</span></div>
+                            <div class="bar"><div class="progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>React.js / Next.js</span><span class="skill-percent">88%</span></div>
+                            <div class="bar"><div class="progress" style="width: 88%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Vue.js / Nuxt</span><span class="skill-percent">80%</span></div>
+                            <div class="bar"><div class="progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Tailwind CSS</span><span class="skill-percent">92%</span></div>
+                            <div class="bar"><div class="progress" style="width: 92%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><img src="https://img.icons8.com/color/32/git.png" alt="Tools"> Tools & Lainnya</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Git & GitHub</span><span class="skill-percent">90%</span></div>
+                            <div class="bar"><div class="progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>REST API / GraphQL</span><span class="skill-percent">85%</span></div>
+                            <div class="bar"><div class="progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>State Management (Redux, Pinia, Zustand)</span><span class="skill-percent">82%</span></div>
+                            <div class="bar"><div class="progress" style="width: 82%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Testing (Jest, Vitest, React Testing Library)</span><span class="skill-percent">75%</span></div>
+                            <div class="bar"><div class="progress" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>CI/CD (GitHub Actions, Vercel, Netlify)</span><span class="skill-percent">80%</span></div>
+                            <div class="bar"><div class="progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Figma / UI Design Basics</span><span class="skill-percent">70%</span></div>
+                            <div class="bar"><div class="progress" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-header">
+                <span class="section-tag">Project</span>
+                <h2>Project <span class="highlight">Unggulan</span></h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <img src="p1.png" alt="E-Commerce Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/external-link.png" alt=""> Live Demo</a>
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/github.png" alt=""> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Fullstack Project</span>
+                        <h3>E-Commerce Admin Dashboard</h3>
+                        <p>Dashboard admin lengkap untuk manajemen produk, pesanan, dan pengguna dengan fitur real-time analytics, role-based access control, dan export data.</p>
+                        <div class="project-tech">
+                            <span>Next.js 14</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span><span>Tailwind</span><span>NextAuth</span>
+                        </div>
+                        <div class="project-highlights">
+                            <h4>Highlights:</h4>
+                            <ul>
+                                <li>Server-side rendering & Server Actions untuk performa optimal</li>
+                                <li>Real-time updates dengan Server-Sent Events</li>
+                                <li>Role-based access (Admin, Manager, Staff)</li>
+                                <li>Chart.js untuk visualisasi sales & analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="p1.png" alt="Task Management App">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/external-link.png" alt=""> Live Demo</a>
+                            <a href="#" class "btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/github.png" alt=""> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Frontend Project</span>
+                        <h3>TaskFlow - Project Management</h3>
+                        <p>Aplikasi manajemen tugas tim dengan board Kanban drag-and-drop, real-time collaboration, dan notifikasi.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>TypeScript</span><span>Zustand</span><span>Socket.io</span><span>Tailwind</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="p1.png" alt="Weather Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/external-link.png" alt=""> Live Demo</a>
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/github.png" alt=""> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">API Integration</span>
+                        <h3>WeatherNow - Cuaca Real-time</h3>
+                        <p>Aplikasi cuaca dengan geolocation, forecast 7 hari, historical data, dan PWA support untuk offline access.</p>
+                        <div class="project-tech">
+                            <span>Vue 3</span><span>Pinia</span><span>OpenWeather API</span><span>PWA</span><span>Vite</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="p1.png" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/external-link.png" alt=""> Live Demo</a>
+                            <a href="#" class="btn-link" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/github.png" alt=""> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Personal Project</span>
+                        <h3>Portfolio Website (Ini!)</h3>
+                        <p>Website portofolio personal dengan animasi smooth, dark mode, dan performa optimal (Lighthouse 100).</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>Vanilla JS</span><span>GSAP</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-cta">
+                <p>Lihat lebih banyak project di GitHub</p>
+                <a href="https://github.com/alfin" target="_blank" class="btn btn-outline">GitHub Profile →</a>
+            </div>
+        </section>
+
+        <section id="kontak" class="section contact">
+            <div class="section-header">
+                <span class="section-tag">Kontak</span>
+                <h2>Mari <span class="highlight">Berkolaborasi</span>!</h2>
+                <p class="section-desc">Saya terbuka untuk peluang freelance, full-time position, atau sekadar ngobrol soal teknologi.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item email-card">
+                        <div class="contact-icon">
+                            <img src="https://img.icons8.com/fluency/32/new-post.png" alt="Email">
+                        </div>
+                        <div class="email-content">
+                            <h4>Email</h4>
+                            <a href="mailto:alfinalifurrohman99@gmail.com" class="cta-text">Contact Me</a>
+                        </div>
+                        <a href="cv.pdf" class="cv-btn" download>
+                            <img src="https://img.icons8.com/fluency/24/resume.png" alt="CV">
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/alfin" target="_blank" class="social-icon" aria-label="GitHub">
+                            <img src="https://img.icons8.com/fluency/32/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://linkedin.com/in/alfin" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <img src="https://img.icons8.com/fluency/32/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://instagram.com/alfin" target="_blank" class="social-icon" aria-label="Instagram">
+                            <img src="https://img.icons8.com/fluency/32/instagram-new.png" alt="Instagram">
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer class="footer">
+        <p>&copy; 2024 Alfin Alifurrohman. Dibangun dengan <span class="heart">♥</span> dan banyak kopi.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Project</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+    </footer>
 
-
-
-    <br><br>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
