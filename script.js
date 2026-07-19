@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initSmoothScroll() {
-        navLinks.forEach(link => {
+        const allLinks = [...navLinks, ...document.querySelectorAll('.sidebar-links a')];
+        allLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
@@ -35,16 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         behavior: 'smooth'
                     });
                 }
+                if (typeof closeSidebar === 'function') closeSidebar();
             });
         });
     }
 
     function initScrollSpy() {
+        const sidebarLinks = document.querySelectorAll('.sidebar-links a');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
                     navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                    sidebarLinks.forEach(link => {
                         link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                     });
                 }
@@ -179,6 +185,31 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, 500);
     }
 
+    function initSidebar() {
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.sidebar-overlay');
+        const closeBtn = document.querySelector('.sidebar-close');
+
+        function openSidebar() {
+            hamburger.classList.add('active');
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.closeSidebar = function() {
+            hamburger.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+    }
+
     initSmoothScroll();
     initScrollSpy();
     initNavbarScroll();
@@ -189,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectCards();
     initTypewriter();
     initScrollAnimations();
+    initSidebar();
 });
 
 document.addEventListener('DOMContentLoaded', () => {
